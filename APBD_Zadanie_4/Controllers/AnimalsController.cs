@@ -7,6 +7,7 @@ namespace APBD_Zadanie_4.Controllers
 
     public class AnimalsController : ControllerBase
     {
+        [HttpGet]
         public ActionResult<IEnumerable<Animal>> GetAnimals()
         {
             return Ok(AnimalsDataStore.Current.Animals);
