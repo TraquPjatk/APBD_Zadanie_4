@@ -77,5 +77,14 @@ namespace APBD_Zadanie_4.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("id:int")] public ActionResult<Animal> RemoveAnimal(int id, AnimalCreationDTO animalDTO)
+        {
+            var animalToRemove = AnimalsDataStore.Current.Animals.FirstOrDefault(a => a.Id == id);
+
+            AnimalsDataStore.Current.Animals.Remove(animalToRemove);
+           
+            return NoContent();
+        }
     }
 }
