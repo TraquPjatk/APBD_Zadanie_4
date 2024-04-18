@@ -13,6 +13,6 @@ namespace APBD_Zadanie_4
         public double Weight { get; set; }
 
         public string Color { get; set; }
-        // public List<Visit> Visits { get; set; }
+        public List<Visit> Visits { get; set; }
     }
 }
